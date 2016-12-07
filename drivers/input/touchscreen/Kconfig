@@ -150,6 +150,19 @@ config TOUCHSCREEN_CY8CTMG110
 	  To compile this driver as a module, choose M here: the
 	  module will be called cy8ctmg110_ts.
 
+config TOUCHSCREEN_CYPRESS_CYTTSP4
+	tristate "Cypress TMA463 touchscreen"
+	depends on I2C
+	help
+	  Say Y here if you have a Cypress TMA463  touchscreen.
+
+	  If unsure, say N.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called cyttsp4.
+
+source "drivers/input/touchscreen/cypress/Kconfig"
+
 config TOUCHSCREEN_CYTTSP_CORE
 	tristate "Cypress TTSP touchscreen"
 	help
@@ -955,6 +968,19 @@ config TOUCHSCREEN_FT5X06_GESTURE
 
          If unsure, say N.
 
+config TOUCHSCREEN_HIMAX852XES
+       tristate "Himax touchscreens"
+       depends on I2C
+       help
+         Say Y here if you have a hx852x touchscreen.
+	 hx852x controllers are multi touch controllers which can
+	 report 5 touches at a time.
+
+         If unsure, say N.
+
+         To compile this driver as a module, choose M here: the
+         module will be called hx852xES.
+
 config TOUCHSCREEN_MSTAR21XX
        tristate "mstar touchscreens"
        depends on I2C
@@ -1051,6 +1077,22 @@ config TOUCHSCREEN_BU21150
 	  your system.
 
 	  If unsure, say N.
+
+config TOUCHSCREEN_MSG2XXX
+	bool "Mstar msg2xxx touchpanel"
+	depends on I2C
+	help
+	 Say Y here if you have a Mstar Msg2XXX touchscreen.
+	 Msg2XXX controllers are multi touch controllers which can
+	 report 2 or 5 touches at a time.
+
+	 If unsure, say N.
+
+config TOUCHSCREEN_PROXIMITY_SENSOR
+	tristate "Touchscreen proximity support"
+	default n
+	help
+	 select for proximity sensor support.
 
 config INPUT_MT_WRAPPER
 	tristate "Input Multitouch Wrapper"

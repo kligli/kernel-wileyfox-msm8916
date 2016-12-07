@@ -36,6 +36,15 @@
 				linux,contiguous-region = <&cont_splash_mem>;
 			};
 		};
+
+                mdss_fb1: qcom,mdss_fb_wfd {
+                        cell-index = <1>;
+                        compatible = "qcom,mdss-fb";
+			qcom,cont-splash-memory {
+				linux,contiguous-region = <&wb_mem>;
+			};
+                };
+
 	};
 
 	mdss_dsi0: qcom,mdss_dsi@1ac8000 {

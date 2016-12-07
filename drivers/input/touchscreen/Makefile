@@ -18,6 +18,7 @@ obj-$(CONFIG_TOUCHSCREEN_ATMEL_TSADCC)	+= atmel_tsadcc.o
 obj-$(CONFIG_TOUCHSCREEN_AUO_PIXCIR)	+= auo-pixcir-ts.o
 obj-$(CONFIG_TOUCHSCREEN_BU21013)	+= bu21013_ts.o
 obj-$(CONFIG_TOUCHSCREEN_CY8CTMG110)	+= cy8ctmg110_ts.o
+obj-$(CONFIG_TOUCHSCREEN_CYPRESS_CYTTSP4)	+= cypress/
 obj-$(CONFIG_TOUCHSCREEN_CYTTSP_CORE)	+= cyttsp_core.o
 obj-$(CONFIG_TOUCHSCREEN_CYTTSP_I2C)	+= cyttsp_i2c.o
 obj-$(CONFIG_TOUCHSCREEN_CYTTSP_SPI)	+= cyttsp_spi.o
@@ -84,3 +85,12 @@ obj-$(CONFIG_TOUCHSCREEN_GT9XX)		+= gt9xx/
 obj-$(CONFIG_TOUCHSCREEN_BU21150)	+= bu21150.o
 obj-$(CONFIG_INPUT_MT_WRAPPER)		+= input_mt_wrapper.o
 obj-$(CONFIG_TOUCHSCREEN_IT7260_I2C)    += it7258_ts_i2c.o
+
+obj-$(CONFIG_TOUCHSCREEN_HIMAX852XES)	+= himax_852xES/
+
+obj-$(CONFIG_MACH_LONGCHEER)	+= lct_tp_fm_info.o
+obj-$(CONFIG_MACH_LONGCHEER)	+= lct_ctp_selftest.o
+obj-$(CONFIG_MACH_LONGCHEER)	+= lct_ctp_upgrade.o
+obj-$(CONFIG_MACH_LONGCHEER)	+= lct_if_ctp_upgrade.o
+
+obj-$(CONFIG_TOUCHSCREEN_MSG2XXX)	+= msg2xxx.o
